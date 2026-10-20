@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#087f5b">
+  <meta name="description" content="Dịch vụ vệ sinh công nghiệp tại Việt Trì, Phú Thọ: vệ sinh sau xây dựng, văn phòng, nhà xưởng, nhà ở, giặt ghế sofa và thảm. Liên hệ để được tư vấn và báo giá.">
+  <title>Vệ Sinh Công Nghiệp | Việt Trì, Phú Thọ</title>
+  <style>
+    :root {
+      --green: #087f5b;
+      --green-dark: #075c45;
+      --mint: #e8f7f0;
+      --ink: #17332b;
+      --muted: #61756e;
+      --line: #e2ece7;
+      --orange: #ffb454;
+      --white: #ffffff;
+      --shadow: 0 18px 48px rgba(13, 68, 49, .10);
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0; color: var(--ink); background: #fbfdfc;
+      font-family: Arial, Helvetica, sans-serif; line-height: 1.6;
+    }
+    a { color: inherit; text-decoration: none; }
+    .container { width: min(1120px, calc(100% - 36px)); margin: 0 auto; }
+    .topbar { background: var(--green-dark); color: #eaf8f1; font-size: 13px; padding: 8px 0; }
+    .topbar-inner { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+    header { background: rgba(255,255,255,.96); border-bottom: 1px solid var(--line); }
+    .nav { min-height: 76px; display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+    .brand { display: flex; align-items: center; gap: 11px; font-weight: 800; line-height: 1.15; }
+    .brand-icon { width: 44px; height: 44px; display: grid; place-items: center; border-radius: 14px; color: white; background: var(--green); font-size: 23px; }
+    .brand small { display: block; margin-top: 5px; color: var(--muted); font-size: 11px; font-weight: 600; letter-spacing: .7px; }
+    .nav-links { display: flex; align-items: center; gap: 24px; font-size: 14px; font-weight: 700; }
+    .btn { display: inline-flex; align-items: center; justify-content: center; gap: 9px; border: 0; border-radius: 12px; padding: 13px 18px; background: var(--green); color: white; font-weight: 800; cursor: pointer; box-shadow: 0 8px 20px rgba(8,127,91,.18); transition: transform .18s, background .18s; }
+    .btn:hover { background: var(--green-dark); transform: translateY(-1px); }
+    .btn-light { color: var(--green-dark); background: white; box-shadow: none; border: 1px solid #dcebe3; }
+    .hero { padding: 62px 0 56px; background: radial-gradient(circle at 85% 12%, #d8f4e6 0, transparent 28%), linear-gradient(135deg,#f2fbf6 0%,#ffffff 70%); overflow: hidden; }
+    .hero-grid { display: grid; grid-template-columns: 1.03fr .97fr; align-items: center; gap: 42px; }
+    .eyebrow { display: inline-flex; align-items: center; gap: 8px; color: var(--green-dark); background: #e1f5e9; border: 1px solid #ccebd9; padding: 7px 12px; border-radius: 999px; font-size: 12px; font-weight: 800; letter-spacing: .35px; }
+    h1 { font-size: clamp(34px, 4.6vw, 56px); line-height: 1.09; letter-spacing: -1.8px; margin: 20px 0 18px; }
+    h1 span { color: var(--green); }
+    .hero p { max-width: 560px; font-size: 17px; color: var(--muted); margin: 0 0 24px; }
+    .hero-actions { display: flex; gap: 12px; flex-wrap: wrap; }
+    .trust-row { display: flex; gap: 18px; flex-wrap: wrap; margin-top: 25px; color: #4b685e; font-size: 13px; font-weight: 700; }
+    .trust-row span { display: inline-flex; align-items: center; gap: 6px; }
+    .hero-photo { min-height: 390px; position: relative; border-radius: 28px; overflow: hidden; box-shadow: var(--shadow); background: linear-gradient(145deg,#b8e8d2,#e9f8f0); }
+    .hero-photo img { width: 100%; height: 390px; display: block; object-fit: cover; }
+    .photo-label { position: absolute; left: 18px; right: 18px; bottom: 18px; padding: 16px 18px; border: 1px solid rgba(255,255,255,.6); border-radius: 17px; background: rgba(255,255,255,.93); backdrop-filter: blur(8px); }
+    .photo-label strong { display: block; font-size: 17px; }
+    .photo-label span { font-size: 13px; color: var(--muted); }
+    section { padding: 68px 0; }
+    .section-head { max-width: 680px; margin: 0 auto 32px; text-align: center; }
+    .section-head h2 { margin: 10px 0; font-size: clamp(27px, 3.3vw, 38px); letter-spacing: -.8px; line-height: 1.2; }
+    .section-head p { color: var(--muted); margin: 0; }
+    .services { display: grid; grid-template-columns: repeat(3,1fr); gap: 18px; }
+    .service-card { padding: 24px; background: white; border: 1px solid var(--line); border-radius: 20px; box-shadow: 0 8px 24px rgba(15,65,47,.035); }
+    .service-icon { display: grid; place-items: center; width: 54px; height: 54px; border-radius: 16px; background: var(--mint); font-size: 27px; margin-bottom: 17px; }
+    .service-card h3 { margin: 0 0 8px; font-size: 18px; }
+    .service-card p { margin: 0; font-size: 14px; color: var(--muted); }
+    .why { background: #f0f8f3; }
+    .why-grid { display: grid; grid-template-columns: .9fr 1.1fr; gap: 48px; align-items: center; }
+    .why-copy h2 { margin: 12px 0; font-size: clamp(28px,3.3vw,39px); line-height: 1.2; }
+    .why-copy p { color: var(--muted); }
+    .check-list { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
+    .check-item { display: flex; gap: 11px; padding: 17px; background: white; border: 1px solid #deeee4; border-radius: 15px; font-weight: 700; font-size: 14px; }
+    .check { color: var(--green); font-size: 20px; line-height: 1.2; }
+    .process { display: grid; grid-template-columns: repeat(3,1fr); gap: 18px; }
+    .step { padding: 22px; border: 1px solid var(--line); border-radius: 18px; background: white; }
+    .step-num { color: var(--green); font-size: 12px; font-weight: 900; letter-spacing: 1px; }
+    .step h3 { margin: 8px 0 6px; }
+    .step p { color: var(--muted); font-size: 14px; margin: 0; }
+    .cta-band { padding: 34px; display: flex; align-items: center; justify-content: space-between; gap: 22px; background: linear-gradient(120deg,var(--green-dark),var(--green)); color: white; border-radius: 24px; }
+    .cta-band h2 { font-size: clamp(24px,3vw,34px); line-height: 1.2; margin: 0 0 8px; }
+    .cta-band p { margin: 0; color: #d5f0e4; }
+    .cta-band .btn { background: white; color: var(--green-dark); white-space: nowrap; }
+    .faq { max-width: 800px; margin: 0 auto; }
+    details { padding: 18px 0; border-bottom: 1px solid var(--line); }
+    summary { font-weight: 800; cursor: pointer; }
+    details p { color: var(--muted); margin-bottom: 0; }
+    footer { padding: 34px 0 95px; background: #123c30; color: #eaf8f1; }
+    .footer-grid { display: flex; justify-content: space-between; gap: 24px; flex-wrap: wrap; }
+    footer p, footer small { color: #c0ddd0; }
+    .footer-title { font-weight: 900; font-size: 18px; }
+    .mobile-call { display: none; }
+    @media (max-width: 800px) {
+      .nav { min-height: 68px; }
+      .nav-links { display: none; }
+      .hero { padding: 40px 0; }
+      .hero-grid, .why-grid { grid-template-columns: 1fr; gap: 28px; }
+      .hero-photo, .hero-photo img { min-height: 260px; height: 300px; }
+      .services { grid-template-columns: repeat(2,1fr); }
+      .why-grid { gap: 20px; }
+      .process { grid-template-columns: 1fr; }
+      .cta-band { align-items: flex-start; flex-direction: column; padding: 25px; }
+      .mobile-call { display: flex; position: fixed; z-index: 10; bottom: 12px; left: 12px; right: 12px; }
+      .mobile-call .btn { width: 100%; border-radius: 14px; padding: 16px; }
+    }
+    @media (max-width: 520px) {
+      .container { width: min(100% - 28px, 1120px); }
+      .topbar-inner { justify-content: center; text-align: center; }
+      .brand-icon { width: 40px; height: 40px; }
+      .brand { font-size: 14px; }
+      h1 { font-size: 38px; letter-spacing: -1.2px; }
+      .hero p { font-size: 15px; }
+      .hero-actions .btn { width: 100%; }
+      .trust-row { gap: 10px 15px; }
+      section { padding: 52px 0; }
+      .services { grid-template-columns: 1fr; }
+      .service-card { padding: 21px; }
+      .check-list { grid-template-columns: 1fr; }
+      .hero-photo, .hero-photo img { height: 260px; min-height: 260px; }
+    }
+  </style>
+</head>
+<body>
+  <!-- THAY số điện thoại mẫu 0328861796 bằng số thật của bạn ở các liên kết tel: bên dưới. -->
+  <div class="topbar">
+    <div class="container topbar-inner">
+      <span>📍 Phục vụ Việt Trì và khu vực lân cận, Phú Thọ</span>
+      <span>🕒 Nhận tư vấn và đặt lịch qua điện thoại</span>
+    </div>
+  </div>
+  <header>
+    <div class="container nav">
+      <a class="brand" href="#trang-chu" aria-label="Trang chủ Vệ Sinh Công Nghiệp">
+        <span class="brand-icon">✦</span>
+        <span>VỆ SINH CÔNG NGHIỆP<small>VIỆT TRÌ · PHÚ THỌ</small></span>
+      </a>
+      <nav class="nav-links" aria-label="Điều hướng chính">
+        <a href="#dich-vu">Dịch vụ</a>
+        <a href="#ly-do">Vì sao chọn chúng tôi</a>
+        <a href="#quy-trinh">Quy trình</a>
+        <a class="btn" href="tel:0328861796">☎ Gọi tư vấn</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="trang-chu">
+      <div class="container hero-grid">
+        <div>
+          <span class="eyebrow">✓ GIẢI PHÁP VỆ SINH TẬN NƠI</span>
+          <h1>Không gian sạch hơn,<br><span>an tâm hơn.</span></h1>
+          <p>Dịch vụ vệ sinh nhà ở, văn phòng, nhà xưởng và sau xây dựng tại Việt Trì, Phú Thọ. Liên hệ để trao đổi nhu cầu và nhận báo giá phù hợp.</p>
+          <div class="hero-actions">
+            <a class="btn" href="tel:0328861796">☎ GỌI NGAY ĐỂ TƯ VẤN</a>
+            <a class="btn btn-light" href="#dich-vu">Xem dịch vụ ↓</a>
+          </div>
+          <div class="trust-row">
+            <span>✓ Báo giá trước khi làm</span>
+            <span>✓ Tư vấn theo nhu cầu</span>
+            <span>✓ Hẹn lịch linh hoạt</span>
+          </div>
+        </div>
+        <div class="hero-photo">
+          <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=1100&q=85" alt="Nhân viên thực hiện công việc vệ sinh chuyên nghiệp" fetchpriority="high">
+          <div class="photo-label">
+            <strong>Vệ sinh sạch sẽ, chăm chút từng chi tiết</strong>
+            <span>Nhận tư vấn dịch vụ tại Việt Trì, Phú Thọ</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="dich-vu">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">DỊCH VỤ CỦA CHÚNG TÔI</span>
+          <h2>Làm sạch theo nhu cầu của bạn</h2>
+          <p>Trao đổi diện tích, tình trạng thực tế và lịch mong muốn để được tư vấn phương án phù hợp.</p>
+        </div>
+        <div class="services">
+          <article class="service-card">
+            <div class="service-icon">🏗️</div>
+            <h3>Vệ sinh sau xây dựng</h3>
+            <p>Làm sạch bụi bẩn, vết bám và hoàn thiện vệ sinh trước khi đưa công trình vào sử dụng.</p>
+          </article>
+          <article class="service-card">
+            <div class="service-icon">🏢</div>
+            <h3>Vệ sinh văn phòng</h3>
+            <p>Vệ sinh khu vực làm việc, sàn, kính và các bề mặt theo phạm vi thống nhất.</p>
+          </article>
+          <article class="service-card">
+            <div class="service-icon">🏭</div>
+            <h3>Vệ sinh nhà xưởng</h3>
+            <p>Tư vấn vệ sinh khu vực sản xuất, kho và các hạng mục phù hợp với hiện trạng.</p>
+          </article>
+          <article class="service-card">
+            <div class="service-icon">🏠</div>
+            <h3>Vệ sinh nhà ở</h3>
+            <p>Làm sạch nhà mới, nhà định kỳ hoặc tổng vệ sinh theo yêu cầu của gia đình.</p>
+          </article>
+          <article class="service-card">
+            <div class="service-icon">🛋️</div>
+            <h3>Giặt ghế sofa, thảm</h3>
+            <p>Tiếp nhận nhu cầu làm sạch ghế, thảm và tư vấn cách xử lý theo chất liệu.</p>
+          </article>
+          <article class="service-card">
+            <div class="service-icon">🪟</div>
+            <h3>Lau kính, vệ sinh chi tiết</h3>
+            <p>Trao đổi trước về vị trí, độ cao, mức độ bám bẩn và điều kiện thi công an toàn.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="why" id="ly-do">
+      <div class="container why-grid">
+        <div class="why-copy">
+          <span class="eyebrow">LÀM VIỆC RÕ RÀNG</span>
+          <h2>Chọn phương án phù hợp trước khi bắt đầu</h2>
+          <p>Chúng tôi hướng tới việc trao đổi rõ hạng mục, phạm vi công việc và chi phí trước khi triển khai. Hãy gọi để mô tả công trình và nhận tư vấn.</p>
+          <a class="btn" href="tel:0328861796">☎ Liên hệ tư vấn</a>
+        </div>
+        <div class="check-list">
+          <div class="check-item"><span class="check">✓</span><span>Trao đổi rõ nhu cầu và hạng mục</span></div>
+          <div class="check-item"><span class="check">✓</span><span>Thống nhất chi phí trước khi làm</span></div>
+          <div class="check-item"><span class="check">✓</span><span>Hẹn thời gian phù hợp</span></div>
+          <div class="check-item"><span class="check">✓</span><span>Phục vụ tại Việt Trì và vùng lân cận theo lịch</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="quy-trinh">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">CÁCH ĐẶT DỊCH VỤ</span>
+          <h2>3 bước đơn giản</h2>
+          <p>Gọi điện để trao đổi nhanh về công việc cần vệ sinh.</p>
+        </div>
+        <div class="process">
+          <article class="step"><div class="step-num">BƯỚC 01</div><h3>Gọi và mô tả nhu cầu</h3><p>Cho biết loại công trình, diện tích ước tính và khu vực cần làm.</p></article>
+          <article class="step"><div class="step-num">BƯỚC 02</div><h3>Trao đổi báo giá</h3><p>Thống nhất hạng mục, thời gian và chi phí trước khi xác nhận công việc.</p></article>
+          <article class="step"><div class="step-num">BƯỚC 03</div><h3>Hẹn lịch thực hiện</h3><p>Xác nhận thời gian, địa điểm và các yêu cầu cần lưu ý trước khi làm.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section style="padding-top:0">
+      <div class="container">
+        <div class="cta-band">
+          <div>
+            <h2>Bạn cần vệ sinh công trình?</h2>
+            <p>Gọi điện để trao đổi hạng mục và nhận báo giá tại Việt Trì, Phú Thọ.</p>
+          </div>
+          <a class="btn" href="tel:0328861796">☎ 0328861796
+             · SỐ MẪU</a>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">CÂU HỎI THƯỜNG GẶP</span>
+          <h2>Thông tin trước khi đặt lịch</h2>
+        </div>
+        <div class="faq">
+          <details><summary>Bên bạn phục vụ ở khu vực nào?</summary><p>Trang hiện giới thiệu dịch vụ tại Việt Trì và khu vực lân cận thuộc Phú Thọ. Vui lòng gọi để xác nhận địa chỉ và lịch phục vụ.</p></details>
+          <details><summary>Chi phí vệ sinh được tính như thế nào?</summary><p>Chi phí phụ thuộc loại công trình, diện tích, tình trạng bẩn và các hạng mục cần làm. Hãy liên hệ để trao đổi và nhận báo giá trước khi xác nhận.</p></details>
+          <details><summary>Tôi cần chuẩn bị gì khi gọi đặt lịch?</summary><p>Bạn có thể chuẩn bị địa chỉ, loại dịch vụ, diện tích ước tính, ảnh hiện trạng nếu có và thời gian mong muốn.</p></details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-grid">
+      <div>
+        <div class="footer-title">VỆ SINH CÔNG NGHIỆP</div>
+        <p>Việt Trì, Phú Thọ</p>
+        <small>Dịch vụ vệ sinh theo nhu cầu · Liên hệ để được tư vấn</small>
+      </div>
+      <div>
+        <strong>Liên hệ đặt lịch</strong>
+        <p>Điện thoại: vui lòng thay bằng số thật của bạn</p>
+        <a class="btn" href="tel:0328861796">☎ Gọi ngay</a>
+      </div>
+    </div>
+  </footer>
+
+  <div class="mobile-call">
+    <a class="btn" href="tel:0328861796">☎ GỌI NGAY ĐỂ ĐẶT LỊCH</a>
+  </div>
+</body>
+</html>
